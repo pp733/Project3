@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Result</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+
+			{{message}}
+		  </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<h1>Result Table</h1>
+      <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Value 1</th>
+        <th>Value 2</th>
+        <th>Operation</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>{{ value1 }}</td>
+          <td>{{ value2 }}</td>
+          <td>{{ operation }}</td>
+          <td>{{ result }}</td>
+        </tr>
+    </tbody>
+  </table>
+
+{% endblock %}
