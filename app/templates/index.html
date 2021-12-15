@@ -3,26 +3,29 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important { color: #ffa07a; }
+        .important {
+            color: #ffa07a;
+        }
     </style>
 {% endblock %}
 {% block content %}
-<div class="hero-section">
+    <div class="hero-section">
 
-<div class="row" >
-    <div class="leftcolumn">
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/cal.JPG') }}" alt="Background Image" class="center" >
-        </div>
 
-    </div>
-    <div class="rightcolumn">
-            <div class="card">
-                <h1 style="color: #ffa07a">Hit Calculator</h1>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/cal.JPG') }}" alt="Background Image" class="center">
+                </div>
 
             </div>
-    </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h1 style="color: #ffa07a">Hit Calculator</h1>
 
-</div>
-</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
