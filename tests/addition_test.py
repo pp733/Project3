@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.realpath(__file__)) # Get Current Working Dir
 def test_calculation_addition():
     """testing that our calculator has a static method for addition"""
     #Arrange
-    filename="Input Files/addition.csv"
+    filename="CSVFiles/addition.csv"
     path = os.path.join(BASE_DIR,filename)
     data_frame = pd.read_csv(path)
     print("Read CSV file for addition!")
