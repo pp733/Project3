@@ -1,17 +1,17 @@
-"""Division Class"""
+"""This is the addition calculation which is being inherits the
+value A and B from calculation class"""
+
 from calc.calculations.calculation import Calculation
 
+#This is how you extened the addition class with caclulation
 class Division(Calculation):
-    """Division calculation object"""
+    """This division class has one method to get the result of the calculation A and B from the calculation parent class"""
     def get_result(self):
-        """get the division results"""
-        #initial_value = 1.0
-        try:
-            for index, value in enumerate(self.values):
-                if index == 0:
-                    division_value = value
-                else:
-                    division_value = division_value / value
-            return round(division_value, 5)
-        except ZeroDivisionError:
-            return 'ZeroDivisionError'
+        """Get Result is returning the self.value A and B"""
+        div1 = enumerate(self.values)
+        for i, value in (div1):
+            if i != 0:
+                div_num = div_num / value
+            else:
+                div_num = value
+        return div_num

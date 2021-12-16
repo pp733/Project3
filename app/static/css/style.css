@@ -1,10 +1,25 @@
 body {
-    font-size: 200%;
-    align-content: center;
+    font-family: Verdana;
 }
+.main-logo {
+    width: 115px;
+    height: auto;
+}
+
+.user-avatar {
+    width: 40px;
+    height: auto;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
 footer{
-    background-color: #3b5998;
-    color: beige;
+    background-color: #fa8072;
+    color: black;
     position: fixed;
     bottom:0;
     width:100%;
@@ -12,43 +27,57 @@ footer{
     text-align: center;
 }
 footer a{
-    color: beige;
+    color: black;
     text-decoration: none;
-    /*font-size: 20px;*/
     text-align: center;
-}
-.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3b5998;
-    border: #1c305b;
-}
-label{
-    text-align: center;
-    padding-top: 10px;
-    font-size: 20px; color: #023a50;
 }
 
-li {
-    float: left;
-}
-.topnav a {
-    display: inline-block;
-    text-align: center;
-    padding: 14px  16px;
-    text-decoration: none;
-    font-family: "Tahoma (sans-serif)", serif;
-    color: beige;
-    font-size:20px;
-    float: right;
+.hero-section {
+    background-image: url("/app/static/images/internet.jpeg");
+    height: 50%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
 
 }
-a:hover{
-    background-color: #1c305b;
-    /*color: white;*/
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 0;
 }
+
+.hero-section .hero-content {
+    z-index: 1;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.5), 0px 1px 1px rgba(0,0,0,0.5),
+    2px 1px 1px rgba(0,0,0,0.5), 1px 2px 1px rgba(0,0,0,0.5),
+    3px 2px 1px rgba(0,0,0,0.5), 2px 3px 1px rgba(0,0,0,0.5),
+    4px 3px 1px rgba(0,0,0,0.5), 3px 4px 1px rgba(0,0,0,0.5),
+    5px 4px 1px rgba(0,0,0,0.5), 4px 5px 1px rgba(0,0,0,0.5),
+    6px 5px 1px rgba(0,0,0,0.5), 5px 6px 1px rgba(0,0,0,0.5),
+    7px 6px 1px rgba(0,0,0,0.5);
+}
+
+.text-orange {
+    color: rgb(254, 124, 32) !important;;
+}
+
+
+@media (max-width: 992px) {
+    .user-profile-dd {
+        flex-direction: column;
+        justify-content: center;
+        align-items: end !important;
+    }
+}
+
+
 .center {
     display: block;
     margin-left: 0px;
@@ -56,23 +85,16 @@ a:hover{
     width: 30%;
     height: 30%;
 }
-.hero-image{
-    background-image: url("/app/static/images/background.png");
-    height: 50%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
+
 .leftcolumn {
     float: left;
     width: 50%;
-
 }
+
 .leftcolumn card{
     height: 50%;
 }
+
 .rightcolumn {
     float: left;
     width: 50%;
@@ -80,29 +102,32 @@ a:hover{
     padding-left: 20px;
     margin-left: auto;
     margin-right: auto;
-    /*width: 70%;*/
     height: 70%;
 
 }
+
 .card {
     background-color: white;
     padding: 20px;
-    /*margin-top: 10px;*/
 
 }
+
+
 .card a{
     background-color: white;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    /*margin: auto;*/}
+}
+
 .form{
 border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
     align-content: center;
 }
+
 input[type=text], select {
-  width: 60%;
+  width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -112,7 +137,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 60%;
+  width: 30%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;

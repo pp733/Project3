@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOLID Principles</title>
+
+    <link href="CSS/AAATesting.css" rel="stylesheet">
+    <link href="CSS/global.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/index.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="Images/Logo-removebg-preview.png" class="main-logo" alt="...">
+        </a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll ">
+                <li class="nav-item justify-content-end">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="pylint.html">Pylint </a>
+                    <a class="nav-link active" aria-current="page" href="AAA.html">AAA </a>
+                    <a class="nav-link active" aria-current="page" href="OOPs.html">OOP </a>
+                    <a class="nav-link active" aria-current="page" href="SOLID.html">SOLID </a>
+
+                </li>
+                <li class="nav-item dropdown flex-column-sm alignn-items-sm-end user-profile-dd">
+                    <a class="nav-link dropdown-toggle justify-content-center align-items-center" href="#"
+                       id="navbarDropdown1" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="Images/profileicon.jpg" alt='user_avatar' class="me-2 rounded-circle user-avatar">User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="profile.html">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="logout.html">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1 class="mt-5 mb-4" style="background-color:lightsalmon;">SOLID Principles</h1>
+
+    <div class="row" style="">
+        <div class="col-sm-8">
+            <h2 class="mt-3" style="background-color:lightsalmon;">S (Single Responsibility Principle)</h2>
+
+            <p>
+                The Single Responsibility Principle requires that a class should have only one job.
+                So if a class has more than one responsibility, it becomes coupled. A change to one responsibility
+                results to modification of the other responsibility.
+                This principle helps to localize errors and makes it easier to reuse the code.
+                Any error in execution will point out to a smaller section of your code, accelerating your debug phase.
+            </p>
+            <p>
+            <ul>
+                <li>Lets take a look at the example shown on the right side of the page</li>
+                <li>The function of the division class is to call the division method by getting the values from the
+                    calculation class.
+                </li>
+                <li>It cannot do anything else except division</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            <img src="Images/sr.JPG" alt="Parent Class" style="height: 90%" class="mt-3">
+            <span style="font-weight: bold">Single Responsibility</span>
+
+        </div>
+    </div>
+</div>
+
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="">
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <h2 style="background-color:lightsalmon;">O (Open and Close Principle)</h2>
+
+                <p>
+                    Software entities(Classes, modules, functions) should be open for extension, not modification.
+                    You should not need to modify the code you have already written to accommodate new functionality,
+                    but simply add what you now need.
+                    This does not mean that you cannot change your code when the code premises needs to be modified, but
+                    that if you need to add new functions similar to the one present, you should not require to change
+                    other parts of the code.
+                </p>
+                <p>
+                <ul>
+                    <li>Lets take a look at the example shown on the right side of the page</li>
+                    <li>There are bunch of methods in the calculation class. We cannot write those methods in just one
+                        method, instead we can just extend it to add more functionality.
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="Images/OC.JPG" style="height: 100%" alt="Encapsulation">
+                <span style="font-weight: bold">Open and Close Example</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="">
+    <div class="row mt-4">
+        <div class="col-sm-8">
+            <h3 style="background-color:lightsalmon;">L (Liskov Substitution Principle)</h3>
+
+            <P>
+                This Principle states that a child class must be substitutable for its parent class.
+                It also aims to ensure that the child class can assume the place of its parent class without causing any
+                errors.
+
+            </P>
+            <p>
+            <ul>
+                <li>Lets take a look at the example shown on the right side of the page</li>
+                <li>The addition class can work itself and it won't break anything in its parent class if something goes
+                    wrong.
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            <img src="Images/lsp.JPG" alt="Abstraction">
+            <span style="font-weight: bold">Liskov Substitution Example</span>
+        </div>
+    </div>
+
+</div>
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="">
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <h2 style="background-color:lightsalmon;">I (Interface Segregation Principle)</h2>
+
+                <p>
+                    The interface segregation principle states that an interface should be as small a possible in terms
+                    of cohesion.
+                    In other words, it should do ONE thing.
+                    It doesn’t mean that the interface should have one method. An interface can have multiple cohesive
+                    methods.
+                </p>
+                <p>
+                <ul>
+                    <li>To show a good example of this principle, look at the picture in the right.</li>
+                    <li>The interface segregation principle uses class and interface.</li>
+                    <Li>In this design, the Car only need to implement the go() method that it needs.
+                        It doesn’t need to implement the fly() method that it doesn’t use.
+                    </Li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="Images/isp.JPG" style="height: 100%" alt="Interface">
+                <span style="font-weight: bold">Interface Segregation Example</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="">
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <h2 style="background-color:lightsalmon;">D (Dependency Inversion Principle)</h2>
+
+                <p>
+                    The dependency inversion principle states that: High-level modules should not depend on the
+                    low-level modules. Both should depend on abstractions.
+                    Abstractions should not depend on details. Details should depend on abstractions.
+                    The dependency inversion principle aims to reduce the coupling between classes by creating an
+                    abstraction layer between them.
+                </p>
+                <p>
+                <ul>
+                    <li>Lets take a look at the example on the right side of the page.</li>
+                    <li>During the development of the calculator, we didn't edit much in the high level class.</li>
+                    <Li>We called methods like addition, subtraction, division, etc., from abstraction and created a low
+                        level classes ("class subtraction(calculation))
+                    </Li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="Images/Dependancy.png" style="height: 100%" alt="dependency">
+                <span style="font-weight: bold">Dependency Inversion Example</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="unit_nav">
+    <a href="OOPs.html"> &lt; Previous</a>
+    Page 13 of 13
+</div>
+<footer class="container mt-4 mb-4">
+    <div class="copyright mb-3" style="text-align: center">Purav Patel&#169;</div>
+    <div class="links" style="text-align: center">
+        <a href="https://github.com/pp733/calc2">Single Responsibility</a>
+        <a href="https://github.com/pp733/calc2/tree/part4">Open and Close</a>
+        <a href="https://github.com/pp733/calc2/tree/part4">Liskov Substitute</a>
+        <a href="https://github.com/pp733/calc2/tree/part4">Dependency Inversion</a>
+        <a href="https://www.pythontutorial.net/python-oop/python-interface-segregation-principle/">Interface
+            Segregation</a>
+        <a href="https://github.com/pp733/Project2">Github Link</a>
+        <a href="https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fpro2calc.eastus.azurecontainer.io%2F" rel="nofollow" title="Validate as HTML5"><img alt="w3c" src="Images/W3c.png" style="height: 50px; width: 100px"></a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
